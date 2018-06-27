@@ -8,7 +8,7 @@
         "16884385-782c-4bbf-b3e3-ee4f2441da69"
     ],
     "filterType": "GMScript",
-    "folderName": "Collision + Movement",
+    "folderName": "Movement + Collision",
     "isDefaultView": false,
     "localisedFolderName": ""
 }
