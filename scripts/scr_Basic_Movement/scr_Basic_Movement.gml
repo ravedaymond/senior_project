@@ -12,7 +12,6 @@ if(move_down || move_up){
 		vspd = 0; // Also reset VSPD to 0 when Vertical Friction fully applied.
 	}
 }
-y += vspd;
 #endregion
 
 #region Horiozontal Movement Control
@@ -27,6 +26,4 @@ if(move_right || move_left){
 		hspd = 0; // Also reset HSPD to 0 when Horizontal Friction fully applied.	
 	}
 }
-x += hspd;
 #endregion
-
