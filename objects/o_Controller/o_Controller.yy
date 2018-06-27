@@ -1,34 +1,54 @@
 {
-    "id": "d824ca2c-f4f9-4138-b30f-348fd3b7076c",
+    "id": "e03ea5fa-9bcd-4229-baff-e32d4437613c",
     "modelName": "GMObject",
     "mvc": "1.0",
     "name": "o_Controller",
     "eventList": [
         {
-            "id": "e961cac6-dbfe-4092-b6dd-c8613f6ddbff",
+            "id": "a60fa282-134c-40cf-9b33-7b972f4f5a56",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "d824ca2c-f4f9-4138-b30f-348fd3b7076c"
+            "m_owner": "e03ea5fa-9bcd-4229-baff-e32d4437613c"
         },
         {
-            "id": "815d3938-692e-41ca-9cd4-8c7adbefcac0",
+            "id": "eb33bc64-9cec-4cac-b4bc-8575d4c0e23b",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "e03ea5fa-9bcd-4229-baff-e32d4437613c"
+        },
+        {
+            "id": "141fb8bf-70c6-4f49-ae39-dcaa5e347b38",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 1,
+            "m_owner": "e03ea5fa-9bcd-4229-baff-e32d4437613c"
+        },
+        {
+            "id": "e09c5116-30f2-45e3-973a-2ca2e171d668",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 64,
             "eventtype": 8,
-            "m_owner": "d824ca2c-f4f9-4138-b30f-348fd3b7076c"
+            "m_owner": "e03ea5fa-9bcd-4229-baff-e32d4437613c"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
     "parentObjectId": "00000000-0000-0000-0000-000000000000",
-    "persistent": false,
+    "persistent": true,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
     "physicsFriction": 0.2,

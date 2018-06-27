@@ -1,5 +1,5 @@
 {
-    "id": "16884385-782c-4bbf-b3e3-ee4f2441da69",
+    "id": "c56cef09-4a4c-40ad-9dfa-08cdfaddca5b",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "scr_Basic_Collision",

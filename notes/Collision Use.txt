@@ -1,0 +1,7 @@
+Working currently fine. However may cause overload when colliding with numerous enemy objects at once
+if swarmed. Might want to look into that as a stress test.
+
+Also possible change to Tile-Based Collision System, as documented here:
+	https://www.yoyogames.com/blog/63/best-practices-when-coding-in-gamemaker-studio
+	
+====

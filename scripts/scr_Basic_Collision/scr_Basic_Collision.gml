@@ -1,7 +1,7 @@
 /// @description Collision Control for Objects
 /// @param collisionObject  The object being collided with.
 //---------------------------------------------------------------------------------
-var collisionObject = argument[0];
+var collisionObject = argument0;
 #region Horizontal Collision
 if(place_meeting(x+hspd, y, collisionObject)){
 	while(!place_meeting(x+sign(hspd), y, collisionObject)){ // Prevent Collision Gap
@@ -10,7 +10,7 @@ if(place_meeting(x+hspd, y, collisionObject)){
 	hspd = 0; // Set HSPD to 0
 }
 x += hspd; // Allow Horizontal Movement
-#endregion;
+#endregion
 
 #region Vertical Collision
 if(place_meeting(x, y+vspd, collisionObject)){
@@ -20,4 +20,4 @@ if(place_meeting(x, y+vspd, collisionObject)){
     vspd = 0; // Set VSPD to 0
 }
 y += vspd; // Allow Vertical Movement
-#endregion;
+#endregion

@@ -1,23 +1,23 @@
 {
-    "id": "98509db2-1892-45cb-afab-6330067de05b",
+    "id": "6bf6c8e7-9f83-422b-a314-cb826854e53a",
     "modelName": "GMObject",
     "mvc": "1.0",
     "name": "o_Destructable",
     "eventList": [
         {
-            "id": "39508fa8-0f11-48ca-becf-8d138232d5f5",
+            "id": "8c2d46a0-385c-465e-8ef9-f248f3d6b7a2",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "98509db2-1892-45cb-afab-6330067de05b"
+            "m_owner": "6bf6c8e7-9f83-422b-a314-cb826854e53a"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "b4eb9ea6-3445-4d86-a014-6eb42853ca08",
+    "parentObjectId": "43c0eeeb-13e3-42ea-815c-f0f6f1298f11",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

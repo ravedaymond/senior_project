@@ -1,5 +1,5 @@
 {
-    "id": "9d57f6d9-3ac5-4952-a542-ada39b1d400d",
+    "id": "4a99d7f2-6779-444e-b494-10046d13cf6e",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "scr_Basic_Movement",
