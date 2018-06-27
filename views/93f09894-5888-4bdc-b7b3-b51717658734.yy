@@ -4,7 +4,10 @@
     "mvc": "1.1",
     "name": "93f09894-5888-4bdc-b7b3-b51717658734",
     "children": [
-        
+        "20a982ef-4d3b-4fe9-a132-b25532daa23d",
+        "fce9fbc2-fcc3-456e-9d7a-625500bd3757",
+        "9668e440-6e21-4639-a049-562d66e0d5dd",
+        "47d63fbc-a230-4ea0-97ca-6a7a01c2e55e"
     ],
     "filterType": "GMObject",
     "folderName": "Weapons",
