@@ -33,7 +33,7 @@ if(gamepad_is_connected(0)){
 	move_left	= keyboard_check(ord("A"));
 	move_right	= keyboard_check(ord("D"));
 	aim_dir		= point_direction(self.x, self.y, mouse_x, mouse_y);
-	fire		= mouse_check_button(mb_left);
+	fire		= mouse_check_button_pressed(mb_left);
 	reload		= keyboard_check(ord("R"));
 	dodge		= keyboard_check(vk_space);
 	interact	= keyboard_check(ord("E"));
@@ -43,8 +43,8 @@ if(gamepad_is_connected(0)){
 }
 
 #region Input Notifications
-if(keyboard_check_pressed(vk_anykey) || mouse_check_button_pressed(mb_any)){
-	var key_notif = "INPUT: " + scr_Input_Notification();
-	scr_Notification(key_notif);
-}
+//if(keyboard_check_pressed(vk_anykey) || mouse_check_button_pressed(mb_any)){
+//	var key_notif = "INPUT: " + scr_Input_Get_Type();
+//	scr_Notification(key_notif);
+//}
 #endregion
