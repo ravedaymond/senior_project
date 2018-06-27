@@ -42,3 +42,9 @@ if(gamepad_is_connected(0)){
 	#endregion
 }
 
+#region Input Notifications
+if(keyboard_check_pressed(vk_anykey) || mouse_check_button_pressed(mb_any)){
+	var key_notif = "INPUT: " + scr_Input_Notify();
+	scr_Notification(key_notif);
+}
+#endregion
