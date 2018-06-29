@@ -20,3 +20,13 @@ draw_text(col, row*6, "(GP_VAXIS): " + string(o_Player.left_yaxis));
 draw_text(col, row*7, "(AIM_DIR): " + string(o_Player.aim_dir));
 draw_text(col, row*8, "(HSPD): " + string(o_Player.hspd));
 draw_text(col, row*9, "(VSPD): " + string(o_Player.vspd));
+
+draw_text(col, row*11, "Shooting: " + string(o_Player.shooting));
+draw_text(col, row*12, "Reloading: " + string(o_Player.reloading));
+draw_text(col, row*13, "Weapon: " + scr_Item_Get_Type(ITEM.WEAPON, o_Player.weapon[? "class"]));
+draw_text(col, row*14, "Fire Rate: " + string(o_Player.weapon[? "fire_rate"]));
+draw_text(col, row*15, "Magazine Size: " + string(o_Player.weapon[? "total_mag"]));
+draw_text(col, row*16, "Current Mag: " + string(o_Player.weapon[? "current_mag"]));
+draw_text(col, row*17, "Total Clips: " + string(o_Player.weapon[? "clips"]));
+draw_text(col, row*18, "Reload Speed: " + string(o_Player.weapon[? "rel_spd"]));
+draw_text(col, row*19, "Perfect Reload: " + string(o_Player.weapon[? "perf_rel"]));

@@ -2,7 +2,7 @@
     "id": "b38b0004-68dc-42ea-b8c5-470a34c0de5c",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sprite10",
+    "name": "spr_proto_shield",
     "For3D": false,
     "HTile": false,
     "VTile": false,

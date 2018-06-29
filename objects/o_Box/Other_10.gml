@@ -15,6 +15,5 @@ switch(hp){
 		break;
 	case 0:
 		instance_destroy();
-		show_debug_message("### INSTANCE_DESTROY: Destructable <"+string(id)+">");
 		break;
 }
