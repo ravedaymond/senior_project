@@ -27,6 +27,7 @@ draw_text(col, row*13, "Weapon: " + scr_Item_Get_Type(ITEM.WEAPON, o_Player.weap
 draw_text(col, row*14, "Fire Rate: " + string(o_Player.weapon[? "fire_rate"]));
 draw_text(col, row*15, "Magazine Size: " + string(o_Player.weapon[? "total_mag"]));
 draw_text(col, row*16, "Current Mag: " + string(o_Player.weapon[? "current_mag"]));
-draw_text(col, row*17, "Total Clips: " + string(o_Player.weapon[? "clips"]));
+draw_text(col, row*18, "Max Clip Carry: " + string(o_Player.weapon[? "max_clips"]));
+draw_text(col, row*17, "Current Clips: " + string(o_Player.weapon[? "clips"]));
 draw_text(col, row*18, "Reload Speed: " + string(o_Player.weapon[? "rel_spd"]));
 draw_text(col, row*19, "Perfect Reload: " + string(o_Player.weapon[? "perf_rel"]));

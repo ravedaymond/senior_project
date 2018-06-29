@@ -671,14 +671,6 @@
             }
         },
         {
-            "Key": "a91e3ee3-9d02-413c-8738-046a3b33cf10",
-            "Value": {
-                "id": "4f8a2a8a-e6af-4a69-882b-1b53d34f8d77",
-                "resourcePath": "views\\a91e3ee3-9d02-413c-8738-046a3b33cf10.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "aa6e9444-b489-4a8a-b5de-2518715f610e",
             "Value": {
                 "id": "11abdb93-db7b-4d3f-bd84-28ae077ddaab",
@@ -996,14 +988,6 @@
                 "id": "afb999d8-644b-47ca-a5b8-ba9db358f301",
                 "resourcePath": "objects\\o_Pistol\\o_Pistol.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "fd46f87d-f285-4ef6-b456-f3315e49cf64",
-            "Value": {
-                "id": "31e6e1ed-2758-42ed-bbf9-01d3793ee7fb",
-                "resourcePath": "notes\\empty_note.yy",
-                "resourceType": "GMNotes"
             }
         }
     ],
