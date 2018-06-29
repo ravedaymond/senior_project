@@ -3,38 +3,41 @@
 //---------------------------------------------------------------------------------
 var msg = "";
 switch(true){
-	case move_up:
-		msg ="MOVE_UP";
+	case shoot:
+		msg = "FIRE";
 		break;
-	case move_down:
-		msg ="MOVE_DOWN";
-		break;
-	case move_left:
-		msg ="MOVE_LEFT";
-		break;
-	case move_right:
-		msg ="MOVE_RIGHT";
-		break;
-	case fire:
-		msg ="FIRE";
+	case cast:
+		msg = "CAST";
 		break;
 	case reload:
-		msg ="RELOAD";
+		msg = "RELOAD";
 		break;
 	case dodge:
-		msg ="DODGE";
+		msg = "DODGE";
 		break;
 	case interact:
-		msg ="INTERACT";
+		msg = "INTERACT";
 		break;
 	case start:
-		msg ="START";
+		msg = "START";
 		break;
 	case back:
-		msg ="BACK";
+		msg = "BACK";
+		break;
+	case move_up:
+		msg = "MOVE_UP";
+		break;
+	case move_down:
+		msg = "MOVE_DOWN";
+		break;
+	case move_left:
+		msg = "MOVE_LEFT";
+		break;
+	case move_right:
+		msg = "MOVE_RIGHT";
 		break;
 	default:
-		msg ="UNBOUND_KEY";
+		msg = "UNBOUND_KEY";
 		break;
 }
 return msg;

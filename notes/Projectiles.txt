@@ -1,9 +1,0 @@
-Notes on Projectiles
-****
-
-Different "projectile types" will still use projectile damage objects.
-Things to think about:
-	How to manage different bullet patterns using a single parent? (etc. o_Projectile)
-	CPU/MEM Overload due to projectiles on screen? Needs stress testing at a later point.
-	
-===

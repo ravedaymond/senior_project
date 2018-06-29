@@ -1,4 +1,4 @@
-/// @description Enemy Object Model
+/// @description Grenade Object
 //---------------------------------------------------------------------------------
 #region Inherited Variables
 event_inherited();

@@ -1,8 +1,13 @@
-/// @description Control Player Object
+/// @description Control Player
 //---------------------------------------------------------------------------------
 scr_Input(); // Call Input for Player
 // Need to transfer the above to a non constant call  - especially when managing kb/gp preference
 // as well as gp/kb disconnection when playing.
+
+// Debugging Purposes Only
+if(start){
+	game_restart();
+}
 
 #region Control Depth and Face
 depth = -y;
@@ -31,7 +36,24 @@ switch(state){
 }
 #endregion
 
-if(fire){
-	scr_Create_Projectile();
+#region Weapon Usage
+if(back && !dropped && weapon[? "class"] != -1){
+	event_perform(ev_other, ev_user2);
 }
+if(shoot && !shooting && !reloading){
+	if(weapon[? "current_mag"] > 0){
+		if(weapon[? "class"] == -1){
+			event_perform(ev_other, ev_user3);
+		} else {
+			event_perform(ev_other, ev_user0);
+		}
+	} else {
+		event_perform(ev_other, ev_user1);
+	}
+}
+if(reload && !reloading){
+	event_perform(ev_other, ev_user1);
+}
+#endregion
+
 scr_Basic_Collision(o_Solid); // Call Collision Model

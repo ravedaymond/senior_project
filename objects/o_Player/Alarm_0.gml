@@ -1,2 +1,3 @@
-/// @description
+/// @description Apply Fire Rate
 //---------------------------------------------------------------------------------
+shooting = false;

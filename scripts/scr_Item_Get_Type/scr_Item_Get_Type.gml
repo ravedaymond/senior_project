@@ -11,54 +11,15 @@ switch(argument[0]){
 		break;
 	case 0:
 		type = "INSTANT";
-		switch(argument[1]){
-			case -1:
-				class = "undefined";
-				break;
-			case 0:
-				class = "bandage";
-				break;
-			case 1:
-				class = "medkit";
-				break;
-			case 2:
-				class = "blue-pill";
-				break;
-		}
+		class = scr_Instant_Get_Class(argument[1]);
 		break;
 	case 1:
 		type = "WEAPON";
-		switch(argument[1]){
-			case -1:
-				class = "undefined";
-				break;
-			case 0:
-				class = "pistol";
-				break;
-			case 1:
-				class = "assault";
-				break;
-			case 2:
-				class = "shotgun";
-				break;
-		}
+		class = scr_Weapon_Get_Class(argument[1]);
 		break;
 	case 2:
 		type = "SPECIAL";
-		switch(argument[1]){
-			case -1:
-				class = "undefined";
-				break;
-			case 0:
-				class = "grenade";
-				break;
-			case 1:
-				class = "bomb";
-				break;
-			case 2:
-				class = "mine";
-				break;
-		}
+		class = scr_Special_Get_Class(argument[1]);
 		break;
 }
 return type+" <"+class+">";

@@ -1,8 +1,8 @@
 {
-    "id": "81af91dc-14bc-4d9d-9643-fee7ddf12ba9",
+    "id": "c21c5374-aaa9-469e-9eb6-97033ddaff9b",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scr_Create_Projectile",
+    "name": "scr_Player_Drop_Weapon",
     "IsCompatibility": false,
     "IsDnD": false
 }

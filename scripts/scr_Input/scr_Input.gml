@@ -15,10 +15,11 @@ if(gamepad_is_connected(0)){
 	move_left	= left_xaxis <= -gamepad_deadzone;
 	move_right	= left_xaxis >= gamepad_deadzone;
 	aim_dir		= point_direction(0, 0, right_xaxis, right_yaxis);
-	fire		= gamepad_button_check_pressed(0, gp_shoulderrb);
+	shoot		= gamepad_button_check(0, gp_shoulderrb);
+	cast		= gamepad_button_check_pressed(0, gp_shoulderr);
 	reload		= gamepad_button_check(0, gp_face3);
 	dodge		= gamepad_button_check(0, gp_shoulderlb);
-	interact	= gamepad_button_check(0, gp_face1);
+	interact	= gamepad_button_check_pressed(0, gp_face1);
 	start		= gamepad_button_check(0, gp_start);
 	back		= gamepad_button_check(0, gp_face2);
 	#endregion
@@ -33,10 +34,11 @@ if(gamepad_is_connected(0)){
 	move_left	= keyboard_check(ord("A"));
 	move_right	= keyboard_check(ord("D"));
 	aim_dir		= point_direction(self.x, self.y, mouse_x, mouse_y);
-	fire		= mouse_check_button_pressed(mb_left);
+	shoot		= mouse_check_button(mb_left);
+	cast		= keyboard_check_pressed(ord("F"));
 	reload		= keyboard_check(ord("R"));
 	dodge		= keyboard_check(vk_space);
-	interact	= keyboard_check(ord("E"));
+	interact	= keyboard_check_pressed(ord("E"));
 	start		= keyboard_check(vk_escape);
 	back		= mouse_check_button(mb_right);
 	#endregion
@@ -44,7 +46,6 @@ if(gamepad_is_connected(0)){
 
 #region Input Notifications
 //if(keyboard_check_pressed(vk_anykey) || mouse_check_button_pressed(mb_any)){
-//	var key_notif = "INPUT: " + scr_Input_Get_Type();
-//	scr_Notification(key_notif);
+//	scr_Notification("INPUT: " + scr_Input_Get_Type());
 //}
 #endregion
