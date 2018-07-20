@@ -1,6 +1,6 @@
 /// @description Display which key was pressed on input.
 // Works hierarchicaly. May not display correct key on notification if higher key is held down.
-//---------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------
 var msg = "";
 switch(true){
 	case shoot:

@@ -1,5 +1,5 @@
-/// @description Damaged Player State
-//---------------------------------------------------------------------------------
+/// @description Player Damaged State
+// ---------------------------------------------------------------------------------
 if(hp <= 0){
-	state = PLAYER_STATE.INJURED;	
+	state = PLAYER_STATE.INJURED;
 }

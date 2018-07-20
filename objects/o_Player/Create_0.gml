@@ -1,33 +1,40 @@
 /// @description Player Object Model
-//---------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------
 #region Inheritance
 event_inherited();
 // Override Movement Variables
-spd  = 6;
-acc  = 1;
-fric = 0.5;
+spd		= 4;
+acc		= 1.5;
+fric		= 0.5;
 // Override Attribute Variables
-max_hp	 = 3;
-hp		 = max_hp;
-max_shld = 1;
-shld	 = 0;
+state		= STATE.IDLE;
+hp			= 10;
+hp_max	= 25;
+shld		= 3;
+shld_max	= 5;
 #endregion
 
 #region Object Unique Variables
+image_index = 0;
+image_speed = 0;
+xscale_mod  = 1;
 character	= -1; // Selected Character
+charge_amt	= 0;
+charge_max  = 0;
 interacted	= false; // Has Player Interacted Recently
 dropped		= false; // Has Player Dropped Weapon Recently
-shooting	= false; // Is Player Shooting
+shooting		= false; // Is Player Shooting
 reloading	= false; // Is Player Reloading
 special		= -1; // Current Special
-weapon = ds_map_create();
-weapon[? "class"]		= -1;
-weapon[? "pattern"]		= -1;
-weapon[? "fire_rate"]	= 0.25;
-weapon[? "total_mag"]	= 1;
-weapon[? "current_mag"] = 1;
-weapon[? "clips"]		= -1;
-weapon[? "max_clips"]	= -1;
-weapon[? "rel_spd"]		= -1;
-weapon[? "perf_rel"]	= -1;
+
+equipped = ds_map_create();
+equipped[? "type"]			= -1;
+equipped[? "ammo_mag"]		= 1;
+equipped[? "ammo_res"]		= -1;
+equipped[? "ammo_maxmag"]	= 1;
+equipped[? "ammo_maxres"]	= -1;
+equipped[? "reld_spd"]		= -1;
+equipped[? "reld_perf"]		= -1;
+equipped[? "fire_rate"]		= 0.25;
+equipped[? "fire_ptrn"]		= -1;
 #endregion

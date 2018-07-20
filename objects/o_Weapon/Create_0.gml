@@ -1,18 +1,18 @@
 /// @description Weapon Object Model
-//---------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------
 #region Inherited Variables
 event_inherited();
 // Override
-item_type = ITEM.WEAPON;
+item_class = ITEM.WEAPON;
 #endregion
 
 #region Object Unique Variables
-pattern = scr_Basic_Projectile;
-fire_rate = 0;
-total_mag = 0;
-current_mag = 0;
-clips = 0;
-max_clips = 0;
-rel_spd = 0;
-perf_rel = 1.0;
+ammo_mag		= 0;
+ammo_res		= 0;
+ammo_maxmag = 0;
+ammo_maxres = 0;
+reld_spd		= 0;
+reld_perf	= 0.75;
+fire_rate	= 0;
+fire_ptrn	= scr_Basic_Projectile;
 #endregion

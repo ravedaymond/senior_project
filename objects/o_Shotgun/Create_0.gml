@@ -1,17 +1,17 @@
 /// @description Shotgun Object
-//---------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------
 #region Inherited Variables
 event_inherited();
 // Override
-item_class = WEAPON.SHOTGUN;
-pattern = scr_Projectile_Shell;
+item_type = WEAPON.SHOTGUN;
+fire_ptrn = scr_Projectile_Shell;
 fire_rate = 0.75;
-total_mag = 2;
-current_mag = 2;
-clips = 4;
-max_clips = 10;
-rel_spd = 1;
-perf_rel = 1.0;
+ammo_maxmag	= 4;
+ammo_mag	= 4;
+ammo_maxres	= 40;
+ammo_res	= 10;
+reld_spd	= 1;
+reld_perf = 0.75;
 #endregion
 
 #region Object Unique Variables

@@ -1,4 +1,4 @@
 /// @description Item Object Model
-//---------------------------------------------------------------------------------
-item_type = ITEM.UNDEFINED;
+// ---------------------------------------------------------------------------------
 item_class = ITEM.UNDEFINED;
+item_type = ITEM.UNDEFINED;

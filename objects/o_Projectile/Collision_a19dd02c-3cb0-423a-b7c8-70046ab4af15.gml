@@ -1,5 +1,5 @@
 /// @description Collision with Solid Object
-//---------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------
 with(other){
 	if(object_is_ancestor(object_index, o_Destructable)){
 		hp--;

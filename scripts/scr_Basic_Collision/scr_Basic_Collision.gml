@@ -1,6 +1,6 @@
 /// @description Collision Control for Objects
 /// @param collisionObject  The object being collided with.
-//---------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------
 var collisionObject = argument0;
 #region Horizontal Collision
 if(place_meeting(x+hspd, y, collisionObject)){

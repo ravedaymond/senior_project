@@ -1,5 +1,5 @@
 /// @description Basic Player Control Model
-//---------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------
 #region Vertical Movement Control
 if(move_down || move_up){
 	vspd += sign(move_down-move_up)*acc;

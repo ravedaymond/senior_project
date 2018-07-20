@@ -1,6 +1,6 @@
 /// @description Drop the players current held weapon.
-/// @param class The class of weapon being dropped.
-//---------------------------------------------------------------------------------
+/// @param argument[0] The class of weapon being dropped.
+// ---------------------------------------------------------------------------------
 var xx = x;
 var yy = y;
 var zz = "Instances";

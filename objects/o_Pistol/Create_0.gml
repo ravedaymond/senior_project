@@ -1,16 +1,16 @@
 /// @description Pistol Object
-//---------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------
 #region Inherited Variables
 event_inherited();
 // Override
-item_class = WEAPON.PISTOL;
+item_type = WEAPON.PISTOL;
 fire_rate = 0.5;
-total_mag = 5;
-current_mag = 5;
-clips = 3;
-max_clips = 7;
-rel_spd = 1;
-perf_rel = 1.0;
+ammo_maxmag	= 9;
+ammo_mag	= 3;
+ammo_maxres	= 72;
+ammo_res	= 3;
+reld_spd	= 1;
+reld_perf = 0.45;
 #endregion
 
 #region Object Unique Variables

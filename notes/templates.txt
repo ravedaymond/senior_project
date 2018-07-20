@@ -1,0 +1,21 @@
+/// @description 
+// ---------------------------------------------------------------------------------
+#region Inherited Variables
+event_inherited();
+// Override
+
+#endregion
+
+#region Object Unique Variables
+
+#endregion
+
+
+/// @description Instance Clean Up
+// ---------------------------------------------------------------------------------
+if(instance_exists(id)){
+	instance_destroy(id);
+	show_debug_message("### CLEAN_UP: <Instance Type> <"+string(id)+">");
+}
+
+

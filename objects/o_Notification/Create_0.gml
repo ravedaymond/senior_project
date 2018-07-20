@@ -1,5 +1,5 @@
 /// @description Ininitialize Notification Object
-//---------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------
 ds_notifs		= -1; // Placeholder value for used DS_LIST
 notif_decaying	= false;
 notif_alpha		= 1;

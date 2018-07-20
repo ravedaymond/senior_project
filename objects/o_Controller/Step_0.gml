@@ -1,2 +1,10 @@
-/// @description Game Running Control
-//---------------------------------------------------------------------------------
+/// @description Game Control
+// ---------------------------------------------------------------------------------
+if(keyboard_check_pressed(vk_pagedown)){
+	if(debug){
+		debug = false;
+	} else {
+		debug = true;
+		show_debug_overlay(true);
+	}
+}

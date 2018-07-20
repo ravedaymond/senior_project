@@ -1,6 +1,6 @@
 /// @description
 /// @param msg The message to display.
-//---------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------
 var msg = argument[0];
 if(!instance_exists(o_Notification)){
 	instance_create_layer(0, 0, "Instances", o_Notification);

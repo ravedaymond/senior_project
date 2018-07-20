@@ -1,19 +1,21 @@
 /// @description Living Object Model
-//---------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------
 #region Movement Variables
-spd  = 0;	// Max Speed
-acc  = 0;	// Acceleration Value
-hspd = 0;	// Horizontal Speed
-vspd = 0;	// Vertical Speed
-fric = 0;	// Friction
-face = 0;	// Facing Direction
+spd	= 0;
+acc	= 0;
+fric	= 0;
+hspd	= 0;
+vspd	= 0;
+face	= 0;
 #endregion
 
 #region Attribute Variables
-depth	 = -y; // Object Depth
-state	 = -1; // Object State
-max_hp	 = 0; // Total Health
-hp		 = 0;	// Current Health
-max_shld = 0; // Total Shield
-shld	 = 0;	// Current Shield
+depth		= -y;
+state		= -1;
+hp			= 0;
+hp_max	= 0;
+shld		= 0;
+shld_max = 0;
+damaged	= false;
+injured	= false;
 #endregion

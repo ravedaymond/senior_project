@@ -1,16 +1,16 @@
 /// @description Assault Object
-//---------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------
 #region Inherited Variables
 event_inherited();
 // Override
-item_class = WEAPON.ASSAULT;
+item_type = WEAPON.ASSAULT;
 fire_rate = 0.1;
-total_mag = 32;
-current_mag = 32;
-clips = 2;
-max_clips = 4;
-rel_spd = 1;
-perf_rel = 1.0;
+ammo_maxmag	= 31;
+ammo_mag	= 31;
+ammo_maxres	= 256;
+ammo_res	= 48;
+reld_spd	= 1;
+reld_perf = 0.8;
 #endregion
 
 #region Object Unique Variables

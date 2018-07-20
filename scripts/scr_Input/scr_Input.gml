@@ -1,5 +1,5 @@
 /// @description Receive Input
-//---------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------
 gamepad_count		= gamepad_get_device_count();
 gamepad_deadzone	= 0.35;
 
@@ -43,9 +43,3 @@ if(gamepad_is_connected(0)){
 	back		= mouse_check_button(mb_right);
 	#endregion
 }
-
-#region Input Notifications
-//if(keyboard_check_pressed(vk_anykey) || mouse_check_button_pressed(mb_any)){
-//	scr_Notification("INPUT: " + scr_Input_Get_Type());
-//}
-#endregion

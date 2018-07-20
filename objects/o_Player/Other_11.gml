@@ -1,9 +1,9 @@
-/// @description Reload
-//---------------------------------------------------------------------------------
-if(weapon[? "clips"] > 0){
+/// @description Reload Equipped Weapon
+// ---------------------------------------------------------------------------------
+if(equipped[? "ammo_res"] > 0){
 	reloading = true;
-	alarm[1] = room_speed * weapon[? "rel_spd"];
+	charge_max = room_speed*equipped[? "reld_spd"];
+	alarm[1] = room_speed*equipped[? "reld_spd"];
 } else {
-	scr_Player_Reset_Weapon();
+	// No Ammo Reserves || Empty Weapon
 }
-

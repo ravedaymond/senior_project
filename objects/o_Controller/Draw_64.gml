@@ -1,5 +1,5 @@
-/// @description Draw GUI + Debug Stats
-//---------------------------------------------------------------------------------
+/// @description Debug Stats
+// ---------------------------------------------------------------------------------
 // Set draw color
 draw_set_color(c_silver);
 
@@ -8,26 +8,73 @@ var windowWidth = window_get_width();
 var windowHeight = window_get_height();
 var col = 32;
 var row = 16;
+var rmult = 0;
 // 
 
-// Debug Stats
-draw_text(col, row, "(RIGHT-LEFT): " + string(sign(o_Player.hspd)));
-draw_text(col, row*2, "(DOWN-UP): " + string(sign(o_Player.vspd)));
-draw_text(col, row*3, "(FACE): " + string(o_Player.face));
-draw_text(col, row*4, "(GP_COUNT): " + string(o_Player.gamepad_count));
-draw_text(col, row*5, "(GP_HAXIS): " + string(o_Player.left_xaxis));
-draw_text(col, row*6, "(GP_VAXIS): " + string(o_Player.left_yaxis));
-draw_text(col, row*7, "(AIM_DIR): " + string(o_Player.aim_dir));
-draw_text(col, row*8, "(HSPD): " + string(o_Player.hspd));
-draw_text(col, row*9, "(VSPD): " + string(o_Player.vspd));
-
-draw_text(col, row*11, "Shooting: " + string(o_Player.shooting));
-draw_text(col, row*12, "Reloading: " + string(o_Player.reloading));
-draw_text(col, row*13, "Weapon: " + scr_Item_Get_Type(ITEM.WEAPON, o_Player.weapon[? "class"]));
-draw_text(col, row*14, "Fire Rate: " + string(o_Player.weapon[? "fire_rate"]));
-draw_text(col, row*15, "Magazine Size: " + string(o_Player.weapon[? "total_mag"]));
-draw_text(col, row*16, "Current Mag: " + string(o_Player.weapon[? "current_mag"]));
-draw_text(col, row*18, "Max Clip Carry: " + string(o_Player.weapon[? "max_clips"]));
-draw_text(col, row*17, "Current Clips: " + string(o_Player.weapon[? "clips"]));
-draw_text(col, row*18, "Reload Speed: " + string(o_Player.weapon[? "rel_spd"]));
-draw_text(col, row*19, "Perfect Reload: " + string(o_Player.weapon[? "perf_rel"]));
+if(!debug){
+	draw_text(col, row*(rmult++), "HP:  " + string(o_Player.hp) + "/" + string(o_Player.hp_max));
+	rmult++;
+	var sprite_offset = 32;
+	repeat(o_Player.hp_max){
+		draw_sprite_ext(spr_proto_health, 0, col+sprite_offset, row*rmult, 2, 2, 0, c_white, 1);
+		sprite_offset += 32;
+	}
+	sprite_offset = 32;
+	repeat(o_Player.hp){
+		draw_sprite_ext(spr_proto_health, 1, col+sprite_offset, row*rmult, 2, 2, 0, c_white, 1);
+		sprite_offset += 32;
+	}
+	rmult++;
+	draw_text(col, row*(rmult++), "SH: " + string(o_Player.shld) + "/" + string(o_Player.shld_max));
+	rmult++;
+	sprite_offset = 32;
+	repeat(o_Player.shld_max){
+		draw_sprite_ext(spr_proto_shield, 0, col+sprite_offset, row*rmult, 2, 2, 0, c_white, 1);
+		sprite_offset += 32;
+	}
+	sprite_offset = 32;
+	repeat(o_Player.shld){
+		draw_sprite_ext(spr_proto_shield, 1, col+sprite_offset, row*rmult, 2, 2, 0, c_white, 1);
+		sprite_offset += 32;
+	}
+	rmult++;
+	draw_text(col, row*(rmult++), "EQUIPPED: " + scr_Item_Lookup(ITEM.WEAPON, o_Player.equipped[? "type"]));
+	draw_text(col, row*(rmult++), "AMMO: " + string(o_Player.equipped[? "ammo_mag"]) + "/" + string(o_Player.equipped[? "ammo_res"]));
+	rmult++;rmult++;
+	// draw ammo counters
+	sprite_offset = 16;
+	repeat(o_Player.equipped[? "ammo_maxmag"]){
+		draw_sprite_ext(spr_proto_ammo, 0, col+sprite_offset, row*rmult, 2, 2, 0, c_white, 1)
+		sprite_offset += 16;
+	}
+	sprite_offset = 16;
+	repeat(o_Player.equipped[? "ammo_mag"]){
+		draw_sprite_ext(spr_proto_ammo, 1, col+sprite_offset, row*rmult, 2, 2, 0, c_white, 1);
+		sprite_offset += 16;
+	}
+	
+	
+} else {
+	rmult = 4;
+	// Debug Stats
+	draw_text(col, row*(rmult++), "(RIGHT-LEFT): " + string(sign(o_Player.hspd)));
+	draw_text(col, row*(rmult++), "(DOWN-UP): " + string(sign(o_Player.vspd)));
+	draw_text(col, row*(rmult++), "(FACE): " + string(o_Player.face));
+	draw_text(col, row*(rmult++), "(X-SCALE): " + string(o_Player.image_xscale));
+	draw_text(col, row*(rmult++), "(GP_COUNT): " + string(o_Player.gamepad_count));
+	draw_text(col, row*(rmult++), "(GP_HAXIS): " + string(o_Player.left_xaxis));
+	draw_text(col, row*(rmult++), "(GP_VAXIS): " + string(o_Player.left_yaxis));
+	draw_text(col, row*(rmult++), "(AIM_DIR): " + string(o_Player.aim_dir));
+	draw_text(col, row*(rmult++), "(HSPD): " + string(o_Player.hspd));
+	draw_text(col, row*(rmult++), "(VSPD): " + string(o_Player.vspd));
+	rmult++;
+	draw_text(col, row*(rmult++), "Shooting: " + string(o_Player.shooting));
+	draw_text(col, row*(rmult++), "Reloading: " + string(o_Player.reloading));
+	draw_text(col, row*(rmult++), "Weapon: " + scr_Item_Lookup(ITEM.WEAPON, o_Player.equipped[? "type"]));
+	draw_text(col, row*(rmult++), "Max Mag: " + string(o_Player.equipped[? "ammo_maxmag"]));
+	draw_text(col, row*(rmult++), "Max Ammo: " + string(o_Player.equipped[? "ammo_maxres"]));
+	draw_text(col, row*(rmult++), "Fire Rate: " + string(o_Player.equipped[? "fire_rate"]));
+	draw_text(col, row*(rmult++), "Reload Speed: " + string(o_Player.equipped[? "reld_spd"]));
+	draw_text(col, row*(rmult++), "Perfect Reload: " + string(o_Player.equipped[? "reld_perf"]));
+	rmult++;
+}

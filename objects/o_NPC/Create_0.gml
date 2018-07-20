@@ -1,5 +1,5 @@
 /// @description NPC Object Model
-//---------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------
 #region Inherited Variables
 event_inherited();
 // Override Movement Variables
