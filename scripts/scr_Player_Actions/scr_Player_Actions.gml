@@ -19,15 +19,15 @@ if(shoot && !shooting && !reloading){
 #endregion
 
 #region Reloading
-if(reload && !reloading){
+if(reload && !reloading && equipped[? "ammo_mag"] < equipped[? "ammo_maxmag"]){
 	event_perform(ev_other, ev_user1);
 }
 if(reloading){
 	charge_amt++; // Increment Reload Charge Bar
 	// Perfect Reload Control
-	if(reload){ // && Charge_amt % is between the lowest and highest values for reld_perf
-		//alarm[1] = 0;
-	}
+	//if(reload){ // && Charge_amt % is between the lowest and highest values for reld_perf
+	//	alarm[1] = 1;
+	//}
 }
 #endregion
 

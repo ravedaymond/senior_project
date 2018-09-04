@@ -10,7 +10,6 @@ var col = 32;
 var row = 16;
 var rmult = 0;
 // 
-
 if(!debug){
 	draw_text(col, row*(rmult++), "HP:  " + string(o_Player.hp) + "/" + string(o_Player.hp_max));
 	rmult++;
@@ -52,8 +51,6 @@ if(!debug){
 		draw_sprite_ext(spr_proto_ammo, 1, col+sprite_offset, row*rmult, 2, 2, 0, c_white, 1);
 		sprite_offset += 16;
 	}
-	
-	
 } else {
 	rmult = 4;
 	// Debug Stats
@@ -68,6 +65,27 @@ if(!debug){
 	draw_text(col, row*(rmult++), "(HSPD): " + string(o_Player.hspd));
 	draw_text(col, row*(rmult++), "(VSPD): " + string(o_Player.vspd));
 	rmult++;
+	switch(o_Player.state){
+		case STATE.IDLE:
+			draw_text(col, row*(rmult++), "STATE: IDLE");
+		break;
+		case STATE.MOVE:
+			draw_text(col, row*(rmult++), "STATE: MOVE");
+		break;
+		case STATE.DODGE:
+			draw_text(col, row*(rmult++), "STATE: DODGE");
+		break;
+		case STATE.INJURED:
+			draw_text(col, row*(rmult++), "STATE: INJURED");
+		break;
+		case STATE.DYING:
+			draw_text(col, row*(rmult++), "STATE: DYING");
+		break;
+		default:
+			draw_text(col, row*(rmult++), "STATE: null");
+		break;
+	}
+	draw_text(col, row*(rmult++), "Damaged: " + string(o_Player.damaged));
 	draw_text(col, row*(rmult++), "Shooting: " + string(o_Player.shooting));
 	draw_text(col, row*(rmult++), "Reloading: " + string(o_Player.reloading));
 	draw_text(col, row*(rmult++), "Weapon: " + scr_Item_Lookup(ITEM.WEAPON, o_Player.equipped[? "type"]));

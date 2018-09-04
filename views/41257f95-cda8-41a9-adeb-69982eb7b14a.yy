@@ -11,7 +11,7 @@
         "03510b8f-3b44-4e5c-b263-e2cfe2c8a7c8"
     ],
     "filterType": "GMScript",
-    "folderName": "Lookups",
+    "folderName": "Debugging",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

@@ -1,13 +1,15 @@
 /// @description Globals + Macros
 // ---------------------------------------------------------------------------------
-global.PLAYER_COUNT = 0;
+global.PLAYER_COUNT = 1;
+global.TOTAL_SCORE = 0;
+global.GAME_TIMER = 0;
 
 enum STATE {
 	IDLE = 0,
 	MOVE = 1,
 	DODGE = 2,
-	DAMAGED = 3,
-	INJURED = 4
+	INJURED = 3,
+	DYING = 4,
 }
 enum ITEM {
 	UNDEFINED = -1,
@@ -21,10 +23,10 @@ enum INSTANT {
 	BLUEPILL = 2
 }
 enum WEAPON {
-	PISTOL = 0,
-	ASSAULT = 1,
-	SHOTGUN = 2,
-	SNIPER = 3
+	DISC_PISTOL = 0,
+	BAND_RIFLE = 1,
+	PEN_RIFLE = 2,
+	MISC_BLASTER = 3
 }
 enum SPECIAL {
 	GRENADE = 0,

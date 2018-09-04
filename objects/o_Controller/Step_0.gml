@@ -1,6 +1,6 @@
 /// @description Game Control
 // ---------------------------------------------------------------------------------
-if(keyboard_check_pressed(vk_pagedown)){
+if(keyboard_check_pressed(vk_delete)){
 	if(debug){
 		debug = false;
 	} else {

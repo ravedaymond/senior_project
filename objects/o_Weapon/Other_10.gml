@@ -22,6 +22,7 @@ if(o_Player.equipped[? "type"] == item_type){
 	var g = reld_perf;
 	var h = fire_rate;
 	var i = fire_ptrn;
+	var j = proj_type;
 	with(o_Player){
 		ds_map_replace(equipped, "type", a);
 		ds_map_replace(equipped, "ammo_mag", b);
@@ -32,6 +33,7 @@ if(o_Player.equipped[? "type"] == item_type){
 		ds_map_replace(equipped, "reld_perf", g);
 		ds_map_replace(equipped, "fire_rate", h);
 		ds_map_replace(equipped, "fire_ptrn", i);
+		ds_map_replace(equipped, "proj_type", j);
 	}
 	event_inherited();
 }

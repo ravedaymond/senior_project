@@ -15,7 +15,7 @@ if(move_down || move_up){
 #endregion
 
 #region Horiozontal Movement Control
-if(move_right || move_left){
+if(move_right-move_left != 0){
 	hspd += sign(move_right-move_left)*acc;
 	if(abs(hspd) > spd){
 		hspd = sign(hspd)*spd;
@@ -27,3 +27,8 @@ if(move_right || move_left){
 	}
 }
 #endregion
+
+//show_debug_message("LEFT: " + string(keyboard_check_released(ord("A"))));
+//show_debug_message("  UP: " + string(keyboard_check_released(ord("W"))));
+//show_debug_message("DOWN: " + string(keyboard_check_released(ord("S"))));
+//show_debug_message("RIGHT: " + string(keyboard_check_released(ord("D"))));

@@ -5,13 +5,16 @@ var xx = x;
 var yy = y;
 var zz = "Instances";
 switch(argument[0]){
-	case WEAPON.PISTOL:
-		return instance_create_layer(xx, yy, zz, o_Pistol);
+	case WEAPON.DISC_PISTOL:
+		return instance_create_layer(xx, yy, zz, o_Disc_Pistol);
 	break;
-	case WEAPON.ASSAULT:
-		return instance_create_layer(xx, yy, zz, o_Assault);
+	case WEAPON.PEN_RIFLE:
+		return instance_create_layer(xx, yy, zz, o_Pen_Rifle);
 	break;
-	case WEAPON.SHOTGUN:
-		return instance_create_layer(xx, yy, zz, o_Shotgun);
+	case WEAPON.BAND_RIFLE:
+		return instance_create_layer(xx, yy, zz, o_Band_Rifle);
+	break;
+	case WEAPON.MISC_BLASTER:
+		return instance_create_layer(xx, yy, zz, o_Misc_Blaster);
 	break;
 }
