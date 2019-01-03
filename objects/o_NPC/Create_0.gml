@@ -9,5 +9,6 @@ event_inherited();
 #endregion
 
 #region Object Unique Variables
-
+hmov = false;
+vmov = false;
 #endregion

@@ -6,7 +6,7 @@ acc	= 0;
 fric = 0;
 hspd = 0;
 vspd = 0;
-face = 0;
+face = 1;
 #endregion
 
 #region Attribute Variables

@@ -1,13 +1,13 @@
-/// @description Insert description here
+/// @description Weapon Picked Up
 // ---------------------------------------------------------------------------------
-if(o_Player.equipped[? "type"] == item_type){
-	var p_ammo = o_Player.equipped[? "ammo_res"];
+if(other.equipped[? "type"] == item_type){
+	var p_ammo = other.equipped[? "ammo_res"];
 	if(p_ammo < ammo_maxres){
 		p_ammo += ammo_res+ammo_mag;
 		if(p_ammo > ammo_maxres){
 			p_ammo = ammo_maxres;
 		}
-		with(o_Player){
+		with(other){
 			ds_map_replace(equipped, "ammo_res", p_ammo);
 		}
 		event_inherited();
@@ -23,7 +23,7 @@ if(o_Player.equipped[? "type"] == item_type){
 	var h = fire_rate;
 	var i = fire_ptrn;
 	var j = proj_type;
-	with(o_Player){
+	with(other){
 		ds_map_replace(equipped, "type", a);
 		ds_map_replace(equipped, "ammo_mag", b);
 		ds_map_replace(equipped, "ammo_res", c);

@@ -4,13 +4,14 @@
 	Need to transfer input to a non constant call, especially when 
 	managing kb/gp preference as well as gp/kb disconnection when playing.
 */
-scr_Input();
 event_inherited();
-// Debugging Purposes Only
+scr_Get_Face();
 if(start){
 	game_restart();
 }
-
+if(hp <= 0){
+	state = STATE.DYING;
+}
 #region Execute Player State
 switch(state){
 	case STATE.IDLE:
@@ -19,17 +20,8 @@ switch(state){
 	case STATE.MOVE:
 		scr_Player_State_Move();
 	break;
-	case STATE.DODGE:
-		scr_Player_State_Dodge();
-	break;
-	case STATE.INJURED:
-		scr_Player_State_Injured();
-	break;
 	case STATE.DYING:
 		scr_Player_State_Dying();
-	break;
-	default:
-		scr_Basic_Movement();
 	break;
 }
 #endregion

@@ -16,5 +16,5 @@ if(notif_decaying){ // Fade out if Decaying
 
 if(notif_alpha <= 0){ // Destroy Instance
 	instance_destroy();
-	show_debug_message("### INSTANCE_DESTROY: Notification Object");
+	//show_debug_message("### INSTANCE_DESTROY: Notification Object");
 }

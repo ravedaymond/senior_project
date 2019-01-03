@@ -1,5 +1,5 @@
 {
-    "id": "81af91dc-14bc-4d9d-9643-fee7ddf12ba9",
+    "id": "07aec004-2b40-41c7-a40b-81551b3f4e82",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "scr_Projectile_Bullet",

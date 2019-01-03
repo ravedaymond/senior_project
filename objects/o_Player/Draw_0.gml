@@ -34,7 +34,7 @@ if(equipped[? "type"] != -1){
 // Draw Hand
 draw_sprite_ext(spr_player_default_hand, 0, x+lengthdir_x(aim_offset, aim_dir), y+lengthdir_y(aim_offset, aim_dir), -1, -1*image_xscale, aim_dir, c_white, 1);
 #region Shader Control
-if(damaged){
+if(damaged && state != STATE.DYING){
 	gpu_set_blendmode(bm_add);
 	shader_set(shd_Color);
 	var shd_red = shader_get_uniform(shd_Color, "_red");
@@ -50,9 +50,6 @@ if(damaged){
 	shader_reset();
 	gpu_set_blendmode(bm_normal);
 }
-if(state = STATE.INJURED){
-	
-}
 #endregion
 
 #region Draw Charge Bar
@@ -62,7 +59,7 @@ if(charge_max > 0){
 	y-sprite_height/2,
 	x+charge_max/2,
 	y-sprite_height/2,
-	2,
+	4,
 	c_orange,
 	c_orange
 	);
@@ -71,7 +68,7 @@ if(charge_max > 0){
 		y-(sprite_height/2),
 		x+(charge_max*(charge_amt/charge_max)-(charge_max/2)),
 		y-(sprite_height/2),
-		2,
+		4,
 		c_aqua,
 		c_aqua
 	);

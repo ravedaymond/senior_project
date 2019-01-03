@@ -11,5 +11,5 @@ sprite_index = move_sprite;
 if(hspd == 0 && vspd == 0){
 	state = STATE.IDLE;	
 }
-scr_Basic_Movement();
+scr_Player_Movement();
 scr_Player_Actions();

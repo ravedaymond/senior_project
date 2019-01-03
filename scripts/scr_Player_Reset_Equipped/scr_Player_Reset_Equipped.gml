@@ -17,5 +17,5 @@ ds_map_replace(equipped, "ammo_mag", 1);
 ds_map_replace(equipped, "ammo_res", 1);
 ds_map_replace(equipped, "ammo_maxmag", 1);
 ds_map_replace(equipped, "ammo_maxres", 1);
-ds_map_replace(equipped, "fire_rate", 0.25);
+ds_map_replace(equipped, "fire_rate", 0.5);
 

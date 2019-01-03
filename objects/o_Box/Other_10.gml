@@ -1,19 +1,16 @@
-/// @description Step Destruction
+/// @description Destruction Control
 // ---------------------------------------------------------------------------------
 switch(hp){
 	case 4:
 		image_index = 0;
-		break;
+	break;
 	case 3:
 		image_index = 1;
-		break;
+	break;
 	case 2:
 		image_index = 2;
-		break;
+	break;
 	case 1:
 		image_index = 3;
-		break;
-	case 0:
-		instance_destroy();
-		break;
+	break;
 }

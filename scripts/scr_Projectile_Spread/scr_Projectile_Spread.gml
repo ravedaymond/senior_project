@@ -17,6 +17,7 @@ repeat(4){
 			hostile = false;
 			sprite_index = spr_proto_projectile;
 		}
+		dmg = 3;
 		motion_set(dir+irandom_range(-20, 20), spd);
 		image_angle = dir;
 	}

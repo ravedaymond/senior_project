@@ -1,7 +1,7 @@
 /// @description Debug Stats
 // ---------------------------------------------------------------------------------
 // Set draw color
-draw_set_color(c_silver);
+draw_set_color(c_fuchsia);
 
 // Window Variables
 var windowWidth = window_get_width();
@@ -10,48 +10,7 @@ var col = 32;
 var row = 16;
 var rmult = 0;
 // 
-if(!debug){
-	draw_text(col, row*(rmult++), "HP:  " + string(o_Player.hp) + "/" + string(o_Player.hp_max));
-	rmult++;
-	var sprite_offset = 32;
-	repeat(o_Player.hp_max){
-		draw_sprite_ext(spr_proto_health, 0, col+sprite_offset, row*rmult, 2, 2, 0, c_white, 1);
-		sprite_offset += 32;
-	}
-	sprite_offset = 32;
-	repeat(o_Player.hp){
-		draw_sprite_ext(spr_proto_health, 1, col+sprite_offset, row*rmult, 2, 2, 0, c_white, 1);
-		sprite_offset += 32;
-	}
-	rmult++;
-	draw_text(col, row*(rmult++), "SH: " + string(o_Player.shld) + "/" + string(o_Player.shld_max));
-	rmult++;
-	sprite_offset = 32;
-	repeat(o_Player.shld_max){
-		draw_sprite_ext(spr_proto_shield, 0, col+sprite_offset, row*rmult, 2, 2, 0, c_white, 1);
-		sprite_offset += 32;
-	}
-	sprite_offset = 32;
-	repeat(o_Player.shld){
-		draw_sprite_ext(spr_proto_shield, 1, col+sprite_offset, row*rmult, 2, 2, 0, c_white, 1);
-		sprite_offset += 32;
-	}
-	rmult++;
-	draw_text(col, row*(rmult++), "EQUIPPED: " + scr_Item_Lookup(ITEM.WEAPON, o_Player.equipped[? "type"]));
-	draw_text(col, row*(rmult++), "AMMO: " + string(o_Player.equipped[? "ammo_mag"]) + "/" + string(o_Player.equipped[? "ammo_res"]));
-	rmult++;rmult++;
-	// draw ammo counters
-	sprite_offset = 16;
-	repeat(o_Player.equipped[? "ammo_maxmag"]){
-		draw_sprite_ext(spr_proto_ammo, 0, col+sprite_offset, row*rmult, 2, 2, 0, c_white, 1)
-		sprite_offset += 16;
-	}
-	sprite_offset = 16;
-	repeat(o_Player.equipped[? "ammo_mag"]){
-		draw_sprite_ext(spr_proto_ammo, 1, col+sprite_offset, row*rmult, 2, 2, 0, c_white, 1);
-		sprite_offset += 16;
-	}
-} else {
+if(debug) {
 	rmult = 4;
 	// Debug Stats
 	draw_text(col, row*(rmult++), "(RIGHT-LEFT): " + string(sign(o_Player.hspd)));
@@ -88,7 +47,6 @@ if(!debug){
 	draw_text(col, row*(rmult++), "Damaged: " + string(o_Player.damaged));
 	draw_text(col, row*(rmult++), "Shooting: " + string(o_Player.shooting));
 	draw_text(col, row*(rmult++), "Reloading: " + string(o_Player.reloading));
-	draw_text(col, row*(rmult++), "Weapon: " + scr_Item_Lookup(ITEM.WEAPON, o_Player.equipped[? "type"]));
 	draw_text(col, row*(rmult++), "Max Mag: " + string(o_Player.equipped[? "ammo_maxmag"]));
 	draw_text(col, row*(rmult++), "Max Ammo: " + string(o_Player.equipped[? "ammo_maxres"]));
 	draw_text(col, row*(rmult++), "Fire Rate: " + string(o_Player.equipped[? "fire_rate"]));
