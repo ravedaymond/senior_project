@@ -7,7 +7,7 @@ This project is in its final presented state as of 12-07-2018.
 
 **No updates or bug fixes are planned at this point in time**.
 
-Please disregard repository project board and issue tracker as these have not been updated and are considered outdated.
+Please disregard repository project board and issue tracker as these have not been updated and are considered outdated. All issues that were open as of the "End of Semester" commit have been marked as "wont fix" and closed.
 
 ## Project Information
 
